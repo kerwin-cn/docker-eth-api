@@ -1,13 +1,18 @@
 version: '2'    
 
-services:    
+services:  
   geth-api-server:
-    build: ./eth
+    image: ethereum/client-go:latest
     volumes:
       - ./eth/data/:/root/.ethereum        
-    ports:    
-      - '8545:8545'    
-      - '8546:8546'   
-      - '30303:30303' 
-      - '30304:30304'
+    expose:
+      - "8545"
+      - "8586"
+      - "30303/udp"
+      - "30304/udp"
+    ports:
+      - "8545:8545"
+      - "8586:8586"
+      - "30303:30303"
+      - "30304:30304"
     command: "--rpc --rpcapi db,eth,net,web3,personal --rpcaddr 0.0.0.0"
