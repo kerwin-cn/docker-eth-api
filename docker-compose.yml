@@ -1,0 +1,11 @@
+version: '2'    
+  services:    
+    neo-api-server:    
+      build: ./eth
+      volumes:
+        - ./eth/data/:/root/.ethereum        
+      ports:    
+        - '8545:8545'    
+        - '8546:8546'    
+        - '30303:30303' 
+        - '30304:30304'
