@@ -1,8 +1,7 @@
 version: '2'    
 
 services:    
-  neo-api-server:    
-    
+  geth-api-server:
     build: ./eth
     volumes:
       - ./eth/data/:/root/.ethereum        
