@@ -3,6 +3,7 @@ version: '2'
 services:  
   geth-api-server:
     image: ethereum/client-go:latest
+    restart: always
     volumes:
       - ./eth/data/:/root/.ethereum        
     expose:
