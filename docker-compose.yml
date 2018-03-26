@@ -15,5 +15,7 @@ services:
       - "8545:8545"
       - "8586:8586"
       - "30303:30303"
+      - "30303:30303/udp"
       - "30304:30304"
+      - "30304:30304/udp"
     command: "--rpc --rpcapi db,eth,net,web3,personal --rpcaddr 0.0.0.0"
