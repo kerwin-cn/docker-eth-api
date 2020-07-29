@@ -18,4 +18,4 @@ services:
       - "30303:30303/udp"
       - "30304:30304"
       - "30304:30304/udp"
-    command: "--rpc --rpcapi db,eth,net,web3,personal --rpcaddr 0.0.0.0"
+    command: "--http --http.api db,eth,net,web3,personal --http.addr 0.0.0.0"
